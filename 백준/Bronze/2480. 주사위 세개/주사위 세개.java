@@ -7,24 +7,18 @@ public class Main {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		int c = sc.nextInt();
-		int result1;
+		int result;
 		sc.close();
 		
 		if(a == b && b == c) {
-			result1 = 10000+a*1000;
+			result = 10000+a*1000;
+			System.out.println(result);
 		} else if (a == b || b == c || a == c){
-			int sameNumber;
-            if (a == b) {
-                sameNumber = a;
-            } else if (b == c) {
-                sameNumber = b;
-            } else {
-                sameNumber = c;
-            }
-            result1 = 1000 + sameNumber * 100;
+			result = (a==b)?a:c;
+            System.out.println(1000+result*100);
 		} else {
-			 result1 = Math.max(a, Math.max(b, c)) * 100;
+            int smallest = Math.max(a, Math.max(b, c));
+            System.out.println(smallest*100);
 		}
-		System.out.println(result1);
 	}
 }
