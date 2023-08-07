@@ -18,9 +18,13 @@ public class Main {
 			arr[i][0] = a;
 			arr[i][1] = b;
 			total += arr[i][1] * arr[i][0];
+//			System.out.println(
+//					arr[i][0] + " " + arr[i][1] + " = "
+//					+ total);
 		}//for
 		sc.close();
-
+		
+//		System.out.println(total);
 		if (X == total) {
 			System.out.println("Yes");
 		} else {
